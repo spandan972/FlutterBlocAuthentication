@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "746049678673",
+    "project_id": "instax-295b4",
+    "storage_bucket": "instax-295b4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:746049678673:android:8d1bdf882f3b6ed2837770",
+        "android_client_info": {
+          "package_name": "com.example.bloctry"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "746049678673-o7ocgfpltm45hrogfubgo7t3gfuqaehu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADHt_FXVl7BmrOMBXQ6ReyB5yJXFd6aWM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "746049678673-o7ocgfpltm45hrogfubgo7t3gfuqaehu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
