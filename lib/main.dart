@@ -14,3 +14,4 @@ void main() async {
   await Firebase.initializeApp();
   runApp(MainApp(FirebaseUserRepository()));
 }
+//Git is so cool
