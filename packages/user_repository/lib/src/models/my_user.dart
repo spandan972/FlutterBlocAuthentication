@@ -14,6 +14,7 @@ class Myuser extends Equatable {
   });
 
   static const empty = Myuser(id: '', email: '', name: '');
+  //object initializes with empty values in its fields
 
   Myuser copyWith({
     String? id,
@@ -25,6 +26,8 @@ class Myuser extends Equatable {
       email: email ?? this.email,
       name: name ?? this.name,
     );
+    //properties of the my user class are copied to make a new instance.if id is propved then it
+    //will be used as the new value for id. But if it is null then the existing value will be the new value for id
   }
 
   bool get isEmpty => this == Myuser.empty;

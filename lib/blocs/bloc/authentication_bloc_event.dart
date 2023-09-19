@@ -7,10 +7,12 @@ abstract class AuthenticationBlocEvent extends Equatable {
 
   @override
   List<Object> get props => [];
+
+  get user => null;
 }
 
 class AuthenticationUserChanged extends AuthenticationBlocEvent {
   const AuthenticationUserChanged(this.user);
 
-  final user? user;
+  final Myuser? user;
 }

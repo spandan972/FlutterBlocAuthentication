@@ -3,7 +3,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../blocs/sign_in_bloc/sign_in_bloc.dart';
 import '../../components/strings.dart';
 import '../../components/textfield.dart';
 
@@ -31,7 +30,7 @@ class _SignInScreenState extends State<SignInScreen> {
           setState(() {
             signInRequired = false;
           });
-        } else if (state is SignInProcess) {
+        } else if (state is SIgnInProcess) {
           setState(() {
             signInRequired = true;
           });
@@ -78,8 +77,6 @@ class _SignInScreenState extends State<SignInScreen> {
                   validator: (val) {
                     if (val!.isEmpty) {
                       return 'Please fill in this field';
-                    } else if (!passwordRexExp.hasMatch(val)) {
-                      return 'Please enter a valid password';
                     }
                     return null;
                   },

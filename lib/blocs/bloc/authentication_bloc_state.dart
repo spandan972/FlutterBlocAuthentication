@@ -1,28 +1,26 @@
 part of 'authentication_bloc_bloc.dart';
-//defines differnt auth states 
+//defines differnt auth states
 // defines states that the bloc can be in . Different states of my bloc
 
-Enum AuthenticationStatus { authenticated, unauthenticated, UnknownElement }
+enum authenticationStatus { authenticated, unauthenticated, unknown }
 
-class AuthenticationState extends Equatable{
+class AuthenticationState extends Equatable {
 //holds the authenication status wich is one of the three options
-  final AuthenticationStatus status;
-  final user? user;
+  final authenticationStatus status;
+  final User? user;
 //initializes with default values
   const AuthenticationState._({
-    this.status = AuthenticationStatus.unknown,
+    this.status = authenticationStatus.unknown,
     this.user,
   });
 
   const AuthenticationState.unkown() : this._();
 
-  const AuthenticationState.authenticated(user user) : this._(status: AuthenticationStatus.authenticated, user: user);
-  const AuthenticationState.unauthenticated() : this._(status: AuthenticationStatus.unauthenticated, user: user);
-
-
-
+  const AuthenticationState.authenticated(User user)
+      : this._(status: authenticationStatus.authenticated, user: user);
+  const AuthenticationState.unauthenticated()
+      : this._(status: authenticationStatus.unauthenticated);
 
   @override
   List<Object?> get props => [status, user];
-  
 }

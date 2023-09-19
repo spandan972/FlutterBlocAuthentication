@@ -3,8 +3,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:user_repository/user_repository.dart';
-
-import '../../blocs/sign_up_bloc/sign_up_bloc.dart';
 import '../../components/strings.dart';
 import '../../components/textfield.dart';
 
@@ -96,14 +94,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       child: TextButton(
                           onPressed: () {
                             if (_formKey.currentState!.validate()) {
-                              MyUser myUser = MyUser.empty;
+                              Myuser myUser = Myuser.empty;
                               myUser = myUser.copyWith(
                                 email: emailController.text,
                                 name: nameController.text,
                               );
 
                               setState(() {
-                                context.read<SignUpBloc>().add(SignUpRequired(
+                                context.read<SignUpBloc>().add(SignUprequired(
                                     myUser, passwordController.text));
                               });
                             }
